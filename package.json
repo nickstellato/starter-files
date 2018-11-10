@@ -7,7 +7,7 @@
     "clean": "rm -rf dist/*",
     "build": "npm run clean && npm run build:scss && cp src/index.html dist/ && http-server dist/ -o",
     "build:scss": "node-sass src/scss -o dist/",
-    "watch": "concurrently \"npm run watch:scss\" \"live-server --open=dist/ --watch=dist\"",
+    "watch": "concurrently \"npm run watch:scss\" \"live-server --open=src/ --watch=src\"",
     "watch:scss": "node-sass --watch src/scss -o dist/"
   },
   "author": "Nick Stellato",

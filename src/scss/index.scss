@@ -1,4 +1,37 @@
 * {
   box-sizing: border-box;
+  border: 1px solid red;
+}
+
+body {
+  display: grid;
+  grid-template-columns:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+header {
   background-color: blue;
+  grid-area: "header";
+  height: 100px;
+}
+
+main {
+  background-color: black;
+  grid-area: "main";
+  height: 100px;
+}
+
+aside {
+  background-color: green;
+  grid-area: "aside";
+  height: 100px;
+}
+
+footer {
+  background-color: red;
+  grid-area: "footer";
+  height: 100px;
 }
