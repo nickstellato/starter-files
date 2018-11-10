@@ -1,6 +1,6 @@
 {
   "name": "theme",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "watch": "concurrently \"npm run watch:scss\" \"live-server --open=dist/ --watch=dist\"",
     "watch:scss": "node-sass --watch src/scss -o dist/"
   },
-  "author": "",
+  "author": "Nick Stellato",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.0.1",
