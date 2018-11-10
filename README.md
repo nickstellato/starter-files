@@ -3,14 +3,14 @@
 ## Installation
 
 ```shell
-mkdir theme && cd theme
+mkdir _theme_ && cd _theme_
 git clone <repo address> .
 npm install
-npm run dev
+npm run watch
 ```
+
+TODO:
 
 Notes:
 
-- Need to determine the proper npm scripts.
-  - I need to build and dev
-  - I want to be able to git clone, npm install, npm run dev and start developing with index.html from the dist folder being opened on a live server with reload.
+- A user can clone the repo and start a development server.
