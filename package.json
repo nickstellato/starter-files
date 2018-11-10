@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:scss && cp src/index.html dist/",
+    "clean": "rm -rf dist/*",
+    "build": "npm run clean && npm run build:scss && cp src/index.html dist/ && http-server dist/ -o",
     "build:scss": "node-sass src/scss -o dist/",
-    "watch": "npm run watch:scss",
+    "watch": "concurrently \"npm run watch:scss\" \"live-server --open=dist/ --watch=dist\"",
     "watch:scss": "node-sass --watch src/scss -o dist/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^4.0.1",
+    "live-server": "^1.2.0",
     "node-sass": "^4.10.0"
   }
 }
