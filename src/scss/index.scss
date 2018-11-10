@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  border: 1px solid green;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +15,7 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: black;
   grid-area: "header";
 }
 
