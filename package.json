@@ -4,17 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist/*",
-    "build": "npm run clean && npm run build:scss && cp src/index.html dist/ && http-server dist/ -o",
-    "build:scss": "node-sass src/scss -o dist/",
-    "watch": "concurrently \"npm run watch:scss\" \"live-server --open=src/ --watch=src\"",
-    "watch:scss": "node-sass --watch src/scss -o dist/"
+    "clean": "rm -rf dist/",
+    "serve": "live-server --open=dist",
+    "build:css": "node-sass src/scss -o dist/",
+    "build:html": "cp src/*.html dist/",
+    "build": "npm-run-all build:*",
+    "watch:html": "onchange 'src/*.html' -- npm run build:html",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch": "npm-run-all watch:*",
+    "dev": "npm-run-all clean build serve watch"
   },
   "author": "Nick Stellato",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.0.1",
     "live-server": "^1.2.0",
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.10.0",
+    "npm-run-all": "^4.1.3",
+    "onchange": "^5.1.0"
   }
 }

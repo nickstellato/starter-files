@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  border: 1px solid green;
   margin: 0;
   padding: 0;
 }
@@ -21,7 +21,7 @@ header {
 }
 
 main {
-  background-color: black;
+  background-color: yellow;
   grid-area: "main";
 }
 
