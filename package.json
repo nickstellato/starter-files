@@ -1,0 +1,17 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:scss && cp src/index.html dist/",
+    "build:scss": "node-sass src/scss -o dist/",
+    "watch": "npm run watch:scss",
+    "watch:scss": "node-sass --watch src/scss -o dist/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
