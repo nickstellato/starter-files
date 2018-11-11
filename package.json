@@ -6,8 +6,6 @@
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
     "node-sass": "node-sass -o src/scss/ src/scss/index.scss",
-    "build:css": "cp src/scss/index.css dist/",
-    "build:html": "cp src/index.html dist/",
     "server": "browser-sync start --server 'dist' --files 'dist'",
     "reload:html": "onchange src/index.html -- build:html"
   },
