@@ -5,9 +5,19 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
-    "node-sass": "node-sass -o src/scss/ src/scss/index.scss",
-    "server": "browser-sync start --server 'dist' --files 'dist'",
-    "reload:html": "onchange src/index.html -- build:html"
+    "server": "browser-sync start --server 'dist' --files 'dist/**/**.*, dist/**.*'",
+    "autoprefixer": "postcss -u autoprefixer -r dist/*",
+    "build:html": "cp -R ./src/*.html ./dist/",
+    "watch:html": "onchange -a 'src/' 'src/*.html' -- npm run build:html",
+    "build:scss": "node-sass -o src/styles/ src/styles/index.scss",
+    "watch:scss": "onchange src/styles/index.scss -- npm run build:scss",
+    "build:css": "cp src/styles/index.css dist/",
+    "watch:css": "onchange src/styles/index.css -- npm run build:css",
+    "build": "npm-run-all build:*",
+    "watch": "npm-run-all --parallel watch:*",
+    "start": "npm-run-all --parallel server watch",
+    "prestart": "npm-run-all clean build",
+    "postinstall": "npm run start"
   },
   "author": "Nick Stellato",
   "license": "ISC",
@@ -16,6 +26,7 @@
     "browser-sync": "^2.26.3",
     "node-sass": "^4.10.0",
     "nodemon": "^1.18.6",
+    "npm-run-all": "^4.1.3",
     "onchange": "^5.1.0",
     "postcss-cli": "^6.0.1"
   },
