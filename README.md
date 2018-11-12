@@ -3,7 +3,7 @@
 ## Installation
 
 ```shell
-git clone <repo address> .
+git clone https://github.com/nickstellato/starter-files
 npm install
 ```
 
