@@ -7,7 +7,7 @@ git clone https://github.com/nickstellato/starter-files
 npm install
 ```
 
-After `npm install` runs, the server will start with the provided code.
+After `npm install` runs, a server will start with the provided code.
 
 TODO:
 
