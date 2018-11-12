@@ -3,10 +3,11 @@
 ## Installation
 
 ```shell
-mkdir _theme_ && cd _theme_
 git clone <repo address> .
 npm install
 ```
+
+After `npm install` runs, the server will start with the provided code.
 
 TODO:
 
