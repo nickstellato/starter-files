@@ -1,4 +1,4 @@
-# Theme
+# Starter Files
 
 ## Installation
 
