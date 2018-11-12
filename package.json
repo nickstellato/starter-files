@@ -1,8 +1,8 @@
 {
-  "name": "theme",
+  "name": "starter-files",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "npm-run-all --parallel server watch",
     "prestart": "npm-run-all clean build",
